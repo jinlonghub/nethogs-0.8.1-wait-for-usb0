@@ -1,0 +1,330 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC=$(CROSS_COMPILE)gcc$/;"	m
+CONNTIMEOUT	nethogs.h	46;"	d
+CXX	Makefile	/^CXX=$(CROSS_COMPILE)g++$/;"	m
+CXXFLAGS	Makefile	/^CXXFLAGS= -g -Wall -Wextra -I$(YUNOS_ROOT)\/yocto-layers\/build\/arago-tmp-external-linaro-toolchain\/sysroots\/dra7xx-evm\/usr\/include \\$/;"	m
+ConnList	process.h	/^	ConnList (Connection * m_val, ConnList * m_next)$/;"	f	class:ConnList
+ConnList	process.h	/^class ConnList$/;"	c
+Connection	connection.cpp	/^Connection::Connection (Packet * packet)$/;"	f	class:Connection
+Connection	connection.h	/^class Connection$/;"	c
+DEBUG	nethogs.h	55;"	d
+DP_DEBUG	decpcap.c	33;"	d	file:
+DP_ERRBUF_SIZE	decpcap.h	28;"	d
+GreatestFirst	cui.cpp	/^int GreatestFirst (const void * ma, const void * mb)$/;"	f
+HASHKEYSIZE	nethogs.h	62;"	d
+Line	cui.cpp	/^	Line (const char * name, unsigned long inode, double n_recv_value, double n_sent_value, pid_t pid, uid_t uid, const char * n_devicename, std::map<std::string,int> imap)$/;"	f	class:Line
+Line	cui.cpp	/^class Line$/;"	c	file:
+MAX_FDLINK	inode2prog.cpp	/^const int MAX_FDLINK = 10;$/;"	v
+MAX_PID_LENGTH	inode2prog.cpp	/^const int MAX_PID_LENGTH = 20;$/;"	v
+MINORVERSION	Makefile	/^MINORVERSION := 1$/;"	m
+NCURSES_LIBS	Makefile	/^NCURSES_LIBS?=-lncurses$/;"	m
+NEEDROOT	nethogs.h	52;"	d
+NORETURN	nethogs.h	73;"	d
+OBJS	Makefile	/^OBJS=packet.o connection.o process.o refresh.o decpcap.o cui.o inode2prog.o conninode.o devices.o$/;"	m
+Outgoing	packet.cpp	/^bool Packet::Outgoing () {$/;"	f	class:Packet
+PERIOD	nethogs.h	38;"	d
+PID_MAX	cui.cpp	63;"	d	file:
+PROCESSTIMEOUT	nethogs.h	42;"	d
+PROGNAME_WIDTH	nethogs.h	64;"	d
+PackList	connection.h	/^	PackList ()$/;"	f	class:PackList
+PackList	connection.h	/^	PackList (Packet * m_val)$/;"	f	class:PackList
+PackList	connection.h	/^class PackList$/;"	c
+PackListNode	connection.h	/^	PackListNode (Packet * m_val, PackListNode * m_next = NULL)$/;"	f	class:PackListNode
+PackListNode	connection.h	/^class PackListNode$/;"	c
+Packet	packet.cpp	/^Packet::Packet (const Packet &old_packet) {$/;"	f	class:Packet
+Packet	packet.cpp	/^Packet::Packet (in6_addr m_sip, unsigned short m_sport, in6_addr m_dip, unsigned short m_dport, u_int32_t m_len, timeval m_time, direction m_dir)$/;"	f	class:Packet
+Packet	packet.cpp	/^Packet::Packet (in_addr m_sip, unsigned short m_sport, in_addr m_dip, unsigned short m_dport, u_int32_t m_len, timeval m_time, direction m_dir)$/;"	f	class:Packet
+Packet	packet.h	/^class Packet$/;"	c
+ProcList	process.h	/^	ProcList (Process * m_val, ProcList * m_next)$/;"	f	class:ProcList
+ProcList	process.h	/^class ProcList$/;"	c
+Process	process.h	/^	Process (const unsigned long m_inode, const char * m_devicename, const char * m_name = NULL)$/;"	f	class:Process
+Process	process.h	/^class Process$/;"	c
+REVERSEHACK	nethogs.h	57;"	d
+SLL_ADDRLEN	decpcap.c	251;"	d	file:
+SUBVERSION	Makefile	/^SUBVERSION   := 8$/;"	m
+TH_ACK	packet.cpp	162;"	d	file:
+TH_CWR	packet.cpp	165;"	d	file:
+TH_ECE	packet.cpp	164;"	d	file:
+TH_FIN	packet.cpp	158;"	d	file:
+TH_FLAGS	packet.cpp	166;"	d	file:
+TH_PUSH	packet.cpp	161;"	d	file:
+TH_RST	packet.cpp	160;"	d	file:
+TH_SYN	packet.cpp	159;"	d	file:
+TH_URG	packet.cpp	163;"	d	file:
+VERSION	Makefile	/^VERSION      := 0$/;"	m
+VIEWMODE_COUNT	nethogs.h	71;"	d
+VIEWMODE_KBPS	nethogs.h	67;"	d
+VIEWMODE_TOTAL_B	nethogs.h	69;"	d
+VIEWMODE_TOTAL_KB	nethogs.h	68;"	d
+VIEWMODE_TOTAL_MB	nethogs.h	70;"	d
+YUNOS_ROOT	Makefile	/^YUNOS_ROOT=\/home\/wenyang.bwy\/dev_ip31$/;"	m
+_BSD_SOURCE	nethogs.h	35;"	d
+_BSD_SOURCE	packet.h	26;"	d
+__CONNECTION_H	connection.h	22;"	d
+__DECPCAP_H	decpcap.h	22;"	d
+__DEVICES_H	devices.h	23;"	d
+__INODE2PROG_h	inode2prog.h	22;"	d
+__NETHOGS_H	nethogs.h	24;"	d
+__PACKET_H	packet.h	24;"	d
+__PROCESS_H	process.h	24;"	d
+add	connection.cpp	/^void Connection::add (Packet * packet)$/;"	f	class:Connection
+add	connection.cpp	/^void PackList::add (Packet * p)$/;"	f	class:PackList
+addprocinfo	conninode.cpp	/^int addprocinfo (const char * filename) {$/;"	f
+addr	nethogs.h	/^	in_addr_t addr;$/;"	m	class:local_addr
+addr6	nethogs.h	/^	struct in6_addr addr6;$/;"	m	class:local_addr	typeref:struct:local_addr::in6_addr
+addtoconninode	conninode.cpp	/^void addtoconninode (char * buffer)$/;"	f
+alarm_cb	refresh.cpp	/^void alarm_cb (int \/*i*\/)$/;"	f
+bughuntmode	nethogs.cpp	/^bool bughuntmode = false;$/;"	v
+callback	decpcap.h	/^	dp_callback callback [dp_n_packet_types];$/;"	m	struct:dp_handle
+caption	cui.cpp	/^std::string * caption;$/;"	v
+check	process.h	/^	void check () {$/;"	f	class:Process
+check_all_procs	process.cpp	/^void check_all_procs ()$/;"	f
+connections	connection.cpp	/^ConnList * connections = NULL;$/;"	v
+connections	process.h	/^	ConnList * connections;$/;"	m	class:Process
+conninode	conninode.cpp	/^std::map <std::string, unsigned long> conninode;$/;"	v
+contains	nethogs.cpp	/^bool local_addr::contains (const in_addr_t & n_addr) {$/;"	f	class:local_addr
+contains	nethogs.cpp	/^bool local_addr::contains(const struct in6_addr & n_addr) {$/;"	f	class:local_addr
+content	connection.h	/^	PackListNode * content;$/;"	m	class:PackList
+content	nethogs.cpp	/^	dp_handle * content;$/;"	m	class:handle	file:
+curtime	nethogs.cpp	/^timeval curtime;$/;"	v
+device	devices.h	/^	device (const char * m_name, device * m_next = NULL) $/;"	f	class:device
+device	devices.h	/^class device {$/;"	c
+device	nethogs.cpp	/^	const char * device;$/;"	m	struct:dpargs	file:
+devicename	cui.cpp	/^	const char * devicename;$/;"	m	class:Line	file:
+devicename	nethogs.cpp	/^	const char * devicename;$/;"	m	class:handle	file:
+devicename	process.h	/^	const char * devicename;$/;"	m	class:Process
+dip	packet.h	/^	in_addr dip;$/;"	m	class:Packet
+dip6	packet.h	/^	in6_addr dip6;$/;"	m	class:Packet
+dir	packet.h	/^	direction dir;$/;"	m	class:Packet
+dir_incoming	packet.h	/^  dir_incoming, $/;"	e	enum:direction
+dir_outgoing	packet.h	/^  dir_outgoing$/;"	e	enum:direction
+dir_unknown	packet.h	/^  dir_unknown, $/;"	e	enum:direction
+direction	packet.h	/^enum direction {$/;"	g
+do_refresh	cui.cpp	/^void do_refresh()$/;"	f
+dp_addcb	decpcap.c	/^void dp_addcb (struct dp_handle * handle, enum dp_packet_type type, dp_callback callback) $/;"	f
+dp_callback	decpcap.h	/^typedef int (*dp_callback)(u_char *, const dp_header *, const u_char *);$/;"	t
+dp_dispatch	decpcap.c	/^int dp_dispatch (struct dp_handle * handle, int count, u_char *user, int size) {$/;"	f
+dp_fillhandle	decpcap.c	/^struct dp_handle * dp_fillhandle(pcap_t * phandle)$/;"	f
+dp_geterr	decpcap.c	/^char * dp_geterr (struct dp_handle * handle)$/;"	f
+dp_handle	decpcap.h	/^struct dp_handle {$/;"	s
+dp_header	decpcap.h	/^typedef struct pcap_pkthdr dp_header;$/;"	t	typeref:struct:pcap_pkthdr
+dp_n_packet_types	decpcap.h	/^	dp_n_packet_types$/;"	e	enum:dp_packet_type
+dp_open_live	decpcap.c	/^struct dp_handle * dp_open_live(const char * device, int snaplen, int promisc, int to_ms, char * errbuf)$/;"	f
+dp_open_offline	decpcap.c	/^struct dp_handle * dp_open_offline(char * fname, char * ebuf)$/;"	f
+dp_packet_ethernet	decpcap.h	/^	dp_packet_ethernet,$/;"	e	enum:dp_packet_type
+dp_packet_ip	decpcap.h	/^	dp_packet_ip,$/;"	e	enum:dp_packet_type
+dp_packet_ip6	decpcap.h	/^	dp_packet_ip6,$/;"	e	enum:dp_packet_type
+dp_packet_ppp	decpcap.h	/^	dp_packet_ppp,$/;"	e	enum:dp_packet_type
+dp_packet_sll	decpcap.h	/^	dp_packet_sll,$/;"	e	enum:dp_packet_type
+dp_packet_tcp	decpcap.h	/^	dp_packet_tcp,$/;"	e	enum:dp_packet_type
+dp_packet_type	decpcap.h	/^enum dp_packet_type {$/;"	g
+dp_packet_udp	decpcap.h	/^	dp_packet_udp,$/;"	e	enum:dp_packet_type
+dp_parse_ethernet	decpcap.c	/^void dp_parse_ethernet (struct dp_handle * handle, const dp_header * header, const u_char * packet)$/;"	f
+dp_parse_ip	decpcap.c	/^void dp_parse_ip (struct dp_handle * handle, const dp_header * header, const u_char * packet)$/;"	f
+dp_parse_ip6	decpcap.c	/^void dp_parse_ip6 (struct dp_handle * handle, const dp_header * header, const u_char * packet)$/;"	f
+dp_parse_linux_cooked	decpcap.c	/^void dp_parse_linux_cooked (struct dp_handle * handle, const dp_header * header, const u_char * packet)$/;"	f
+dp_parse_ppp	decpcap.c	/^void dp_parse_ppp (struct dp_handle * handle, const dp_header * header, const u_char * packet)$/;"	f
+dp_parse_tcp	decpcap.c	/^void dp_parse_tcp (struct dp_handle * handle, const dp_header * header, const u_char * packet)$/;"	f
+dp_pcap_callback	decpcap.c	/^void dp_pcap_callback (u_char * u_handle, const struct pcap_pkthdr * header, const u_char * packet)$/;"	f
+dp_setnonblock	decpcap.c	/^int dp_setnonblock (struct dp_handle * handle, int i, char * errbuf) {$/;"	f
+dpargs	nethogs.cpp	/^struct dpargs {$/;"	s	file:
+dport	packet.h	/^	unsigned short dport;$/;"	m	class:Packet
+dummy1	decpcap.c	/^	u_int16_t dummy1;$/;"	m	struct:ppp_header	file:
+dummy1	packet.cpp	/^	u_int16_t dummy1;$/;"	m	struct:ppp_header	file:
+dummy2	decpcap.c	/^	u_int16_t dummy2;$/;"	m	struct:ppp_header	file:
+dummy2	packet.cpp	/^	u_int16_t dummy2;$/;"	m	struct:ppp_header	file:
+dummy3	decpcap.c	/^	u_int16_t dummy3;$/;"	m	struct:ppp_header	file:
+dummy3	packet.cpp	/^	u_int16_t dummy3;$/;"	m	struct:ppp_header	file:
+dummy4	decpcap.c	/^	u_int16_t dummy4;$/;"	m	struct:ppp_header	file:
+dummy4	packet.cpp	/^	u_int16_t dummy4;$/;"	m	struct:ppp_header	file:
+dummy5	decpcap.c	/^	u_int16_t dummy5;$/;"	m	struct:ppp_header	file:
+dummy5	packet.cpp	/^	u_int16_t dummy5;$/;"	m	struct:ppp_header	file:
+dummy6	decpcap.c	/^	u_int16_t dummy6;$/;"	m	struct:ppp_header	file:
+dummy6	packet.cpp	/^	u_int16_t dummy6;$/;"	m	struct:ppp_header	file:
+dummy7	decpcap.c	/^	u_int16_t dummy7;$/;"	m	struct:ppp_header	file:
+dummy7	packet.cpp	/^	u_int16_t dummy7;$/;"	m	struct:ppp_header	file:
+exit_ui	cui.cpp	/^void exit_ui ()$/;"	f
+findConnection	connection.cpp	/^Connection * findConnection (Packet * packet)$/;"	f
+findConnectionWithMatchingRefpacketOrSource	connection.cpp	/^Connection * findConnectionWithMatchingRefpacketOrSource(Packet * packet) {$/;"	f
+findConnectionWithMatchingSource	connection.cpp	/^Connection * findConnectionWithMatchingSource(Packet * packet) {$/;"	f
+findPID	inode2prog.cpp	/^struct prg_node * findPID (unsigned long inode)$/;"	f
+findProcess	process.cpp	/^Process * findProcess (struct prg_node * node)$/;"	f
+findProcess	process.cpp	/^Process * findProcess (unsigned long inode)$/;"	f
+forceExit	nethogs.cpp	/^void forceExit(bool success, const char *msg, ...)$/;"	f
+getInode	process.h	/^	unsigned long getInode()$/;"	f	class:Process
+getLastPacket	connection.h	/^	int getLastPacket ()$/;"	f	class:Connection
+getLastPacket	process.cpp	/^int Process::getLastPacket()$/;"	f	class:Process
+getLocal	packet.cpp	/^void getLocal (const char *device, bool tracemode)$/;"	f
+getNext	process.h	/^	ConnList * getNext ()$/;"	f	class:ConnList
+getNext	process.h	/^	ProcList * getNext () { return next; }$/;"	f	class:ProcList
+getProcess	process.cpp	/^Process * getProcess (Connection * connection, const char * devicename)$/;"	f
+getProcess	process.cpp	/^Process * getProcess (unsigned long inode, const char * devicename)$/;"	f
+getUid	process.h	/^	uid_t getUid()$/;"	f	class:Process
+getVal	process.h	/^	Connection * getVal ()$/;"	f	class:ConnList
+getVal	process.h	/^	Process * getVal () { return val; }$/;"	f	class:ProcList
+getVersion	nethogs.cpp	/^const char* getVersion()$/;"	f
+get_default_devices	devices.cpp	/^device * get_default_devices()$/;"	f
+get_info_by_linkname	inode2prog.cpp	/^void get_info_by_linkname (const char * pid, const char * linkname) {$/;"	f
+get_info_for_pid	inode2prog.cpp	/^void get_info_for_pid(const char * pid) {$/;"	f
+gethashstring	packet.cpp	/^char * Packet::gethashstring ()$/;"	f	class:Packet
+getkbps	cui.cpp	/^void getkbps (Process * curproc, float * recvd, float * sent)$/;"	f
+getprogname	inode2prog.cpp	/^std::string getprogname (pid_t pid) {$/;"	f
+gettotal	cui.cpp	/^std::map<std::string,int> gettotal(Process * curproc, u_int32_t * recvd, u_int32_t * sent)$/;"	f
+gettotalb	cui.cpp	/^void gettotalb(Process * curproc, float * recvd, float * sent)$/;"	f
+gettotalkb	cui.cpp	/^std::map<std::string,int> gettotalkb(Process * curproc, float * recvd, float * sent)$/;"	f
+gettotalmb	cui.cpp	/^void gettotalmb(Process * curproc, float * recvd, float * sent)$/;"	f
+handle	nethogs.cpp	/^	handle (dp_handle * m_handle, const char * m_devicename = NULL,$/;"	f	class:handle
+handle	nethogs.cpp	/^class handle {$/;"	c	file:
+hashstring	packet.h	/^	char * hashstring;$/;"	m	class:Packet
+help	main.cpp	/^static void help(void)$/;"	f	file:
+init_ui	cui.cpp	/^void init_ui ()$/;"	f
+inode	inode2prog.h	/^    long inode;$/;"	m	struct:prg_node
+inode	process.h	/^	const unsigned long inode;$/;"	m	class:Process
+inodeproc	inode2prog.cpp	/^std::map <unsigned long, prg_node *> inodeproc;$/;"	v
+invert	packet.cpp	/^direction invert(direction dir) {$/;"	f
+ip6_dst	nethogs.cpp	/^	in6_addr ip6_dst;$/;"	m	struct:dpargs	file:
+ip6_src	nethogs.cpp	/^	in6_addr ip6_src;$/;"	m	struct:dpargs	file:
+ip_dst	nethogs.cpp	/^	in_addr ip_dst;$/;"	m	struct:dpargs	file:
+ip_src	nethogs.cpp	/^	in_addr ip_src;$/;"	m	struct:dpargs	file:
+isOlderThan	packet.cpp	/^bool Packet::isOlderThan (timeval t) {$/;"	f	class:Packet
+is_number	inode2prog.cpp	/^bool is_number (const char * string) {$/;"	f
+itoa	cui.cpp	/^std::string itoa(int i)$/;"	f
+lastpacket	connection.h	/^	int lastpacket;$/;"	m	class:Connection
+len	packet.h	/^	u_int32_t len;$/;"	m	class:Packet
+linktype	decpcap.h	/^	int linktype;$/;"	m	struct:dp_handle
+local_addr	nethogs.h	/^	local_addr (char m_address [33], local_addr * m_next = NULL)$/;"	f	class:local_addr
+local_addr	nethogs.h	/^	local_addr (in_addr_t m_addr, local_addr * m_next = NULL)$/;"	f	class:local_addr
+local_addr	nethogs.h	/^class local_addr {$/;"	c
+local_addrs	packet.cpp	/^local_addr * local_addrs = NULL;$/;"	v
+log	cui.cpp	/^void Line::log() {$/;"	f	class:Line
+m_inode	cui.cpp	/^	unsigned long m_inode;$/;"	m	class:Line	file:
+m_name	cui.cpp	/^	const char * m_name;$/;"	m	class:Line	file:
+m_pid	cui.cpp	/^	pid_t m_pid;$/;"	m	class:Line	file:
+m_trans	cui.cpp	/^    std::map<std::string,int> m_trans;$/;"	m	class:Line	file:
+m_uid	cui.cpp	/^	uid_t m_uid;$/;"	m	class:Line	file:
+main	decpcap_test.cpp	/^int main (int argc, char ** argv)$/;"	f
+main	main.cpp	/^int main (int argc, char** argv)$/;"	f
+man8	Makefile	/^man8 := $(prefix)\/share\/man\/man8\/$/;"	m
+match	packet.cpp	/^bool Packet::match (Packet * other)$/;"	f	class:Packet
+matchSource	packet.cpp	/^bool Packet::matchSource (Packet * other)$/;"	f	class:Packet
+name	devices.h	/^	const char * name;$/;"	m	class:device
+name	inode2prog.h	/^    std::string name;$/;"	m	struct:prg_node
+name	process.h	/^	char * name;$/;"	m	class:Process
+needrefresh	nethogs.cpp	/^bool needrefresh = false;$/;"	v
+newInverted	packet.cpp	/^Packet * Packet::newInverted () {$/;"	f	class:Packet
+next	connection.h	/^	PackListNode * next;$/;"	m	class:PackListNode
+next	devices.h	/^	device * next;$/;"	m	class:device
+next	nethogs.cpp	/^	handle * next;$/;"	m	class:handle	file:
+next	nethogs.h	/^	local_addr * next;$/;"	m	class:local_addr
+next	process.h	/^	ConnList * next;$/;"	m	class:ConnList
+next	process.h	/^	ProcList * next;$/;"	m	class:ProcList
+packettype	decpcap.c	/^	u_int16_t packettype;$/;"	m	struct:ppp_header	file:
+packettype	packet.cpp	/^	u_int16_t packettype;$/;"	m	struct:ppp_header	file:
+pageDown	nethogs.cpp	/^bool pageDown = false;$/;"	v
+pageUp	nethogs.cpp	/^bool pageUp = false;$/;"	v
+pcap_handle	decpcap.h	/^	pcap_t * pcap_handle;$/;"	m	struct:dp_handle
+pid	inode2prog.h	/^    pid_t pid;$/;"	m	struct:prg_node
+pid	process.h	/^	int pid;$/;"	m	class:Process
+ppp_header	decpcap.c	/^struct ppp_header {$/;"	s	file:
+ppp_header	packet.cpp	/^struct ppp_header {$/;"	s	file:
+prefix	Makefile	/^prefix := \/usr\/local$/;"	m
+prg_cache_clear	inode2prog.cpp	/^void prg_cache_clear() {};$/;"	f
+prg_node	inode2prog.h	/^struct prg_node {$/;"	s
+printSystemTime	cui.cpp	/^char* printSystemTime(){$/;"	f
+procclean	process.cpp	/^void procclean ()$/;"	f
+process_init	process.cpp	/^void process_init () $/;"	f
+process_ip	nethogs.cpp	/^int process_ip (u_char * userdata, const dp_header * \/* header *\/, const u_char * m_packet) {$/;"	f
+process_ip6	nethogs.cpp	/^int process_ip6 (u_char * userdata, const dp_header * \/* header *\/, const u_char * m_packet) {$/;"	f
+process_tcp	decpcap_test.cpp	/^int process_tcp (u_char * \/* userdata *\/, const dp_header * \/* header *\/, const u_char * \/* m_packet *\/) {$/;"	f
+process_tcp	nethogs.cpp	/^int process_tcp (u_char * userdata, const dp_header * header, const u_char * m_packet) {$/;"	f
+process_udp	nethogs.cpp	/^int process_udp (u_char * userdata, const dp_header * header, const u_char * m_packet) {$/;"	f
+processes	process.cpp	/^ProcList * processes;$/;"	v
+processlimit	nethogs.cpp	/^unsigned processlimit = 0;$/;"	v
+quit_cb	nethogs.cpp	/^void quit_cb (int \/* i *\/)$/;"	f
+read_file	inode2prog.cpp	/^static std::string read_file (const char* filepath) {$/;"	f	file:
+read_file	inode2prog.cpp	/^static std::string read_file (int fd) {$/;"	f	file:
+recv_packets	connection.h	/^	PackList * recv_packets; $/;"	m	class:Connection
+recv_value	cui.cpp	/^	double recv_value;$/;"	m	class:Line	file:
+refpacket	connection.h	/^	Packet * refpacket;$/;"	m	class:Connection
+refreshconninode	conninode.cpp	/^void refreshconninode ()$/;"	f
+refreshcount	nethogs.cpp	/^unsigned refreshcount = 0;$/;"	v
+refreshdelay	nethogs.cpp	/^unsigned refreshdelay = 1;$/;"	v
+refreshlimit	nethogs.cpp	/^unsigned refreshlimit = 0;$/;"	v
+reread_mapping	inode2prog.cpp	/^void reread_mapping () {$/;"	f
+sa_family	nethogs.cpp	/^	int sa_family;$/;"	m	struct:dpargs	file:
+sa_family	nethogs.h	/^	short int sa_family;$/;"	m	class:local_addr
+sa_family	packet.h	/^	short int sa_family;$/;"	m	class:Packet
+sameinaddr	packet.cpp	/^bool sameinaddr(in_addr one, in_addr other)$/;"	f
+sbin	Makefile	/^sbin := $(prefix)\/sbin$/;"	m
+sent_packets	connection.h	/^	PackList * sent_packets; $/;"	m	class:Connection
+sent_value	cui.cpp	/^	double sent_value;$/;"	m	class:Line	file:
+setNext	process.h	/^	void setNext (ConnList * m_next)$/;"	f	class:ConnList
+setUid	process.h	/^	void setUid(uid_t m_uid)$/;"	f	class:Process
+setnode	inode2prog.cpp	/^void setnode (unsigned long inode, pid_t pid) {$/;"	f
+show	cui.cpp	/^void Line::show (int row, unsigned int proglen)$/;"	f	class:Line
+show_ncurses	cui.cpp	/^void show_ncurses(Line * lines[], int nproc) {$/;"	f
+show_trace	cui.cpp	/^void show_trace(Line * lines[], int nproc) {$/;"	f
+sip	packet.h	/^	in_addr sip;$/;"	m	class:Packet
+sip6	packet.h	/^	in6_addr sip6;$/;"	m	class:Packet
+size	process.cpp	/^int ProcList::size ()$/;"	f	class:ProcList
+sll_addr	decpcap.c	/^	u_int8_t sll_addr[SLL_ADDRLEN];	\/* link-layer address *\/$/;"	m	struct:sll_header	file:
+sll_halen	decpcap.c	/^	u_int16_t sll_halen;		\/* link-layer address length *\/$/;"	m	struct:sll_header	file:
+sll_hatype	decpcap.c	/^	u_int16_t sll_hatype;		\/* link-layer address type *\/$/;"	m	struct:sll_header	file:
+sll_header	decpcap.c	/^struct sll_header {$/;"	s	file:
+sll_pkttype	decpcap.c	/^	u_int16_t sll_pkttype;		\/* packet type *\/$/;"	m	struct:sll_header	file:
+sll_protocol	decpcap.c	/^	u_int16_t sll_protocol;		\/* protocol *\/$/;"	m	struct:sll_header	file:
+sortRecv	nethogs.cpp	/^bool sortRecv = true;$/;"	v
+sport	packet.h	/^	unsigned short sport;$/;"	m	class:Packet
+str2int	inode2prog.cpp	/^int str2int (const char * ptr) {$/;"	f
+str2ulong	inode2prog.cpp	/^unsigned long str2ulong (const char * ptr) {$/;"	f
+string	nethogs.h	/^	char * string;$/;"	m	class:local_addr
+stripspaces	packet.cpp	/^char * stripspaces (char * input)$/;"	f
+sumRecv	connection.h	/^	u_int32_t sumRecv;$/;"	m	class:Connection
+sumSent	connection.h	/^	u_int32_t sumSent;$/;"	m	class:Connection
+sumanddel	connection.cpp	/^u_int32_t PackList::sumanddel (timeval t)$/;"	f	class:PackList
+sumanddel	connection.cpp	/^void Connection::sumanddel (timeval t, u_int32_t * recv, u_int32_t * sent)$/;"	f	class:Connection
+tcp_hdr	packet.cpp	/^struct tcp_hdr {$/;"	s	file:
+tcp_seq	packet.cpp	/^typedef u_int32_t tcp_seq;$/;"	t	file:
+th_ack	packet.cpp	/^       tcp_seq th_ack; \/* acknowledgement number *\/$/;"	m	struct:tcp_hdr	file:
+th_dport	packet.cpp	/^       u_short th_dport; \/* destination port *\/$/;"	m	struct:tcp_hdr	file:
+th_flags	packet.cpp	/^       u_char th_flags;$/;"	m	struct:tcp_hdr	file:
+th_off	packet.cpp	/^       th_off:4; \/* data offset *\/$/;"	m	struct:tcp_hdr	file:
+th_off	packet.cpp	/^       u_int th_off:4, \/* data offset *\/$/;"	m	struct:tcp_hdr	file:
+th_seq	packet.cpp	/^       tcp_seq th_seq; \/* sequence number *\/$/;"	m	struct:tcp_hdr	file:
+th_sport	packet.cpp	/^       u_short th_sport; \/* source port *\/$/;"	m	struct:tcp_hdr	file:
+th_sum	packet.cpp	/^       u_short th_sum; \/* checksum *\/$/;"	m	struct:tcp_hdr	file:
+th_urp	packet.cpp	/^       u_short th_urp; \/* urgent pointer *\/$/;"	m	struct:tcp_hdr	file:
+th_win	packet.cpp	/^       u_short th_win; \/* window *\/$/;"	m	struct:tcp_hdr	file:
+th_x2	packet.cpp	/^       th_x2:4; \/* (unused) *\/$/;"	m	struct:tcp_hdr	file:
+th_x2	packet.cpp	/^       u_int th_x2:4, \/* (unused) *\/$/;"	m	struct:tcp_hdr	file:
+time	packet.h	/^	timeval time;$/;"	m	class:Packet
+tokb	cui.cpp	/^float tokb (u_int32_t bytes)$/;"	f
+tokbps	cui.cpp	/^float tokbps (u_int32_t bytes)$/;"	f
+tomb	cui.cpp	/^float tomb (u_int32_t bytes)$/;"	f
+tracemode	nethogs.cpp	/^bool tracemode = false;$/;"	v
+ui_tick	cui.cpp	/^void ui_tick ()$/;"	f
+uid	process.h	/^	uid_t uid;$/;"	m	class:Process
+uid2username	cui.cpp	/^std::string uid2username (uid_t uid)$/;"	f
+unknownip	process.cpp	/^Process * unknownip; $/;"	v
+unknownprocs	process.cpp	/^std::map <std::string, Process*> unknownprocs;$/;"	v
+unknowntcp	process.cpp	/^Process * unknowntcp; $/;"	v
+unknownudp	process.cpp	/^Process * unknownudp; $/;"	v
+userdata	decpcap.h	/^	u_char * userdata;$/;"	m	struct:dp_handle
+userdata_size	decpcap.h	/^	int userdata_size;$/;"	m	struct:dp_handle
+val	connection.h	/^	Packet * val;$/;"	m	class:PackListNode
+val	process.h	/^	Connection * val;$/;"	m	class:ConnList
+val	process.h	/^	Process * val;$/;"	m	class:ProcList
+version	nethogs.cpp	/^const char version[] = " version " VERSION "." SUBVERSION "." MINORVERSION;$/;"	v
+versiondisplay	main.cpp	/^static void versiondisplay(void)$/;"	f	file:
+viewMode	nethogs.cpp	/^int viewMode = VIEWMODE_KBPS;$/;"	v
+~ConnList	process.h	/^	~ConnList ()$/;"	f	class:ConnList
+~Connection	connection.cpp	/^Connection::~Connection ()$/;"	f	class:Connection
+~PackList	connection.h	/^	~PackList ()$/;"	f	class:PackList
+~PackListNode	connection.h	/^	~PackListNode ()$/;"	f	class:PackListNode
+~Packet	packet.h	/^	~Packet ()$/;"	f	class:Packet
+~Process	process.h	/^	~Process ()$/;"	f	class:Process
