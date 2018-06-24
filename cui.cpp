@@ -127,11 +127,14 @@ char* printSystemTime(){
 std::string uid2username (uid_t uid)
 {
 	struct passwd * pwd = NULL;
+	
 	errno = 0;
 
 	/* points to a static memory area, should not be freed */
 	pwd = getpwuid(uid);
-
+	//pwd = getpwuid(0);
+	return itoa(uid);
+/*
 	if (pwd == NULL)
 		if (errno == 0)
 			return itoa(uid);
@@ -139,6 +142,7 @@ std::string uid2username (uid_t uid)
 			forceExit(false, "Error calling getpwuid(3) for uid %d: %d %s", uid, errno, strerror(errno));
 	else
 		return std::string(pwd->pw_name);
+*/
 }
 
 //change the out put to cout in order to make the result visible , nianhui@2016/07/13
@@ -174,7 +178,7 @@ void Line::show (int row, unsigned int proglen)
 		//mvprintw (row, 8 + 9 + proglen + 2 + 6 + 9 + 3 + 11, "KB/sec");
         char* ltime = printSystemTime();
         std::cout << "["<< ltime <<"]:"<< m_pid << "\t" << m_inode << "\t" << username.c_str() << "\t"<< m_name << "\t" << devicename << "\t" << sent_value << "\t" << recv_value << "\t" << "KB/sec@wnh" << std::endl;
-        //outfile << "["<< ltime <<"]:"<< m_pid << "\t" << m_inode << "\t" << username.c_str() << "\t"<< m_name << "\t" << devicename << "\t" << sent_value << "\t" << recv_value << "\t" <<     "KB/sec@wnh" << std::endl;
+        outfile << "["<< ltime <<"]:"<< m_pid << "\t" << m_inode << "\t" << username.c_str() << "\t"<< m_name << "\t" << devicename << "\t" << sent_value << "\t" << recv_value << "\t" <<     "KB/sec@wnh" << std::endl;
 	    free(ltime);
     }
 
@@ -254,16 +258,16 @@ int GreatestFirst (const void * ma, const void * mb)
 
 void init_ui ()
 {
-	WINDOW * screen = initscr();
-	raw();
-	noecho();
-	cbreak();
-	nodelay(screen, TRUE);
+	//WINDOW * screen = initscr();
+	//raw();
+	//noecho();
+	//cbreak();
+	//nodelay(screen, TRUE);
 	caption = new std::string ("NetHogs");
 	caption->append(getVersion());
-    char* ltime = printSystemTime();
-    caption->append(ltime);
-    free(ltime);
+    	char* ltime = printSystemTime();
+    	caption->append(ltime);
+    	free(ltime);
 	//caption->append(", running at ");
 }
 
@@ -442,7 +446,7 @@ void show_trace(Line * lines[], int nproc) {
 
 void show_ncurses(Line * lines[], int nproc) {
 	int rows; // number of terminal rows
-	int cols; // number of terminal columns
+	int cols = 62; // number of terminal columns
 	unsigned int proglen; // max length of the "PROGRAM" column
 	static unsigned int current_page = 0;
 
@@ -452,8 +456,8 @@ void show_ncurses(Line * lines[], int nproc) {
     std::ofstream outfile;
     outfile.open("nethogs.log",std::ios::app);
 
-	getmaxyx(stdscr, rows, cols);	 /* find the boundaries of the screeen */
-	scrollok(stdscr, TRUE);
+	//getmaxyx(stdscr, rows, cols);	 /* find the boundaries of the screeen */
+	//scrollok(stdscr, TRUE);
 
 	if (cols < 62) {
 		clear();
