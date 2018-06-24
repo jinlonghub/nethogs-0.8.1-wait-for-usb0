@@ -1,10 +1,10 @@
 VERSION      := 0
 SUBVERSION   := 8
 MINORVERSION := 1
-YUNOS_ROOT=/home/wenyang.bwy/dev_ip31
 
 #prefix := /usr
-prefix := /usr/local
+prefix := /yf/usr/local
+CROSS_COMPILE := /home/steven/crosstools/x-tools/arm-cortex_a15-linux-uclibcgnueabihf/bin/
 
 sbin := $(prefix)/sbin
 man8 := $(prefix)/share/man/man8/
@@ -17,16 +17,17 @@ runtests: test
 	
 # nethogs_testsum
 
-CXX=$(CROSS_COMPILE)g++
-CC=$(CROSS_COMPILE)gcc
-CXXFLAGS= -g -Wall -Wextra -I$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/include \
-					  -I$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/include/dbus-1.0/dbus \
-					  -I$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/lib/glib-2.0 \
-					  -I$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/lib/glib-2.0/include \
-					  -I$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/include/dbus-1.0 \
-					  -I$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/lib/dbus-1.0/include \
-					  -L$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/usr/lib \
-					  -L$(YUNOS_ROOT)/yocto-layers/build/arago-tmp-external-linaro-toolchain/sysroots/dra7xx-evm/lib
+CXX=$(CROSS_COMPILE)arm-cortex_a15-linux-uclibcgnueabihf-g++
+CC=$(CROSS_COMPILE)arm-cortex_a15-linux-uclibcgnueabihf-gcc-6.3.0
+CXXFLAGS=-g -Wall -Wextra -I/home/steven/crosstools/x-tools/arm-cortex_a15-linux-uclibcgnueabihf/arm-cortex_a15-linux-uclibcgnueabihf/sysroot/usr/include \
+			  -I/home/steven/src/libpcap \
+			  -L/home/steven/crosstools/x-tools/arm-cortex_a15-linux-uclibcgnueabihf/arm-cortex_a15-linux-uclibcgnueabihf/sysroot/usr/lib \
+			  -L/home/steven/src/libpcap
+CFLAGS=-Wall -Wextra -I/home/steven/crosstools/x-tools/arm-cortex_a15-linux-uclibcgnueabihf/arm-cortex_a15-linux-uclibcgnueabihf/sysroot/usr/include \
+                          -I/home/steven/src/libpcap \
+                          -L/home/steven/crosstools/x-tools/arm-cortex_a15-linux-uclibcgnueabihf/arm-cortex_a15-linux-uclibcgnueabihf/sysroot/usr/lib \
+-L/home/steven/src/libpcap
+
 
 #  -I  include 包含头文件
 #  -L  库文件路径
@@ -59,14 +60,14 @@ test: test.cpp
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) test.cpp -o test -lpcap -lm ${NCURSES_LIBS} -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
 
 nethogs: main.cpp nethogs.cpp $(OBJS)
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) main.cpp $(OBJS) -o nethogs -lpcap -lm -ldbus-1 ${NCURSES_LIBS} -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
+	$(CXX) $(CXXFLAGS)  main.cpp $(OBJS) -o nethogs -lpcap -lm ${NCURSES_LIBS} -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
 #lm  lib-m 用做运算的，这个集成到了libc中，在xtools中的sysroot路径下有所有的lib和头文件
 #-ldbus-1 这个是自己加的，yunos自己编的libpacp需要用 ldbus-1,其头文件和lib理论上在x-tools下。
 nethogs_testsum: nethogs_testsum.cpp $(OBJS)
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) nethogs_testsum.cpp $(OBJS) -o nethogs_testsum -lpcap -lm ${NCURSES_LIBS} -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
+	$(CXX) $(CXXFLAGS) nethogs_testsum.cpp $(OBJS) -o nethogs_testsum -lpcap -lm ${NCURSES_LIBS} -DVERSION=\"$(VERSION)\" -DSUBVERSION=\"$(SUBVERSION)\" -DMINORVERSION=\"$(MINORVERSION)\"
 
 decpcap_test: decpcap_test.cpp decpcap.o
-	$(CXX) $(CXXFLAGS) $(LDFLAGS) decpcap_test.cpp decpcap.o -o decpcap_test -lpcap -lm -ldbus-1
+	$(CXX) $(CXXFLAGS) decpcap_test.cpp decpcap.o -o decpcap_test -lpcap -lm
 
 #-lefence
 

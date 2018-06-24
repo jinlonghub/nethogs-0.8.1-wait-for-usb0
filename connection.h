@@ -102,7 +102,7 @@ public:
 	u_int32_t sumSent;
 	u_int32_t sumRecv;
 private:
-	 * sent_packets; 
+	PackList * sent_packets; 
 	PackList * recv_packets; 
 	int lastpacket;
 };
